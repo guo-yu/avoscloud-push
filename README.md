@@ -1,6 +1,6 @@
 ## avoscloud-push ![NPM version](https://img.shields.io/npm/v/avoscloud-push.svg?style=flat) 
 
-a service side solution to build a push server based on AVOSCloud
+a server side solution to build a push server based on AVOSCloud with built-in MQ, Redis backed.
 
 ### Installation
 ```bash
@@ -15,13 +15,22 @@ var pushServer = new avoscloudPush();
 pushServer
   .set('appId', 'xxxxxxxxx') // alias for `X-AVOSCloud-Application-Id`
   .set('appKey', 'xxxxxxxxx'); // alias for `X-AVOSCloud-Application-Key`
+```
 
+Using push server in exist App server:
+
+```js
 app.post('/addSomethingToPushMq', function(req, res, next){
   var TobePushedObject = req.body;
   // lowlevel function,
   // `deviceToken` needed.
   pushServer.push(TobePushedObject);
 });
+```
+Using push server as a single Server.
+
+```js
+pushServer.run(3001); // Running push server on port 3001
 ```
 
 ### API

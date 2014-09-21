@@ -1,10 +1,10 @@
 {
   "name": "avoscloud-push",
   "version": "0.1.0",
-  "description": "a service side solution to build a push server based on AVOSCloud",
+  "description": "a server side solution to build a push server based on AVOSCloud with built-in MQ, Redis backed.",
   "main": "index.js",
   "scripts": {
-    "test": "node examples/basic.js"
+    "test": "DEBUG=avoscloud-push node examples/basic.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/turingou/avoscloud-push",
   "dependencies": {
-    "avoscloud-sdk": "0.4.2"
+    "avoscloud-sdk": "0.4.2",
+    "debug": "^2.0.0",
+    "kue": "^0.8.8"
   }
 }
