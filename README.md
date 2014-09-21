@@ -10,6 +10,18 @@ $ npm install avoscloud-push
 ### Example
 ```js
 var avoscloudPush = require('avoscloud-push');
+var pushServer = new avoscloudPush();
+
+pushServer
+  .set('appId', 'xxxxxxxxx') // alias for `X-AVOSCloud-Application-Id`
+  .set('appKey', 'xxxxxxxxx'); // alias for `X-AVOSCloud-Application-Key`
+
+app.post('/addSomethingToPushMq', function(req, res, next){
+  var TobePushedObject = req.body;
+  // lowlevel function,
+  // `deviceToken` needed.
+  pushServer.push(TobePushedObject);
+});
 ```
 
 ### API
