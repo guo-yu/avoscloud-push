@@ -1,0 +1,23 @@
+{
+  "name": "avoscloud-push",
+  "version": "0.1.0",
+  "description": "a service side solution to build a push server based on AVOSCloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:turingou/avoscloud-push.git"
+  },
+  "keywords": [
+    "avos",
+    "avoscloud"
+  ],
+  "author": "turing <o.u.turing@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turingou/avoscloud-push/issues"
+  },
+  "homepage": "https://github.com/turingou/avoscloud-push"
+}
